@@ -16,7 +16,7 @@ public class Main {
     
             case TWITTER:
                 TwitterUser twitterUser
-                = new TwitterUser("test@email","Usa", LocalDateTime.now().minusDays(0).toString());
+                = new TwitterUser("test@email","USA", LocalDateTime.now().minusDays(0).toString());
                 break;
 
             default:

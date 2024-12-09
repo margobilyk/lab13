@@ -2,13 +2,14 @@ package ua.ucu.edu.apps.task2;
 
 public class Main {
     public static void main(String[] args) {
-        DataBase db = new DataBase();
-        Authorization auth = new Authorization();
-        if (auth.logIn(db)) {
-            ReportBuilder br = new ReportBuilder(db);
-        }
+        БазаДаних legacyDatabase = new БазаДаних();
+        Авторизація legacyAuthorization = new Авторизація();
 
-        System.out.println(db.getUserData());
-        System.out.println(db.getStaticData());
+        Database database = new DatabaseAdapter(legacyDatabase);
+        Authorization authorization = new AuthorizationAdapter(legacyAuthorization);
+
+        if (authorization.authorize(database)) {
+            new ReportBuilder(database);
+        }
     }
 }
