@@ -1,13 +1,9 @@
 package ua.ucu.edu.apps.task2;
 
-import lombok.Getter;
-
-public class Database {
-
-    @Getter
+public class DatabaseAdapter {
     private final БазаДаних db;
 
-    public Database() {
+    public DatabaseAdapter() {
         this.db = new БазаДаних();
     }
 
@@ -15,7 +11,7 @@ public class Database {
         return db.отриматиДаніКористувача();
     }
 
-    public String getStatistics() {
+    public String getStatisticalData() {
         return db.отриматиСтатистичніДані();
     }
 }
