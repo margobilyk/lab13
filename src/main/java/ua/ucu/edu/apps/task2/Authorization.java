@@ -1,5 +1,15 @@
 package ua.ucu.edu.apps.task2;
 
-public interface Authorization {
-    boolean authorize(Database database);
+public class Authorization {
+
+    private Авторизація auth;
+
+    public Authorization() {
+        this.auth = new Авторизація();
+    }
+
+    public boolean authorise(Database database) {
+        return auth.авторизуватися(database.getDb());
+    }
+
 }

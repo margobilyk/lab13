@@ -6,6 +6,6 @@ public class ReportBuilder {
     public ReportBuilder(Database database) {
         this.database = database;
         System.out.println("User Data: " + database.getUserData());
-        System.out.println("Statistics Data: " + database.getStatisticsData());
+        System.out.println("Statistics Data: " + database.getStatistics());
     }
 }
