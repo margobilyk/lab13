@@ -2,7 +2,7 @@ package ua.ucu.edu.apps.task2;
 
 public class Authorization {
 
-    private Авторизація auth;
+    private final Авторизація auth;
 
     public Authorization() {
         this.auth = new Авторизація();
@@ -11,5 +11,4 @@ public class Authorization {
     public boolean authorise(Database database) {
         return auth.авторизуватися(database.getDb());
     }
-
 }

@@ -2,10 +2,10 @@ package ua.ucu.edu.apps.task2;
 
 import lombok.Getter;
 
-public class Database extends БазаДаних{
+public class Database {
 
     @Getter
-    private БазаДаних db;
+    private final БазаДаних db;
 
     public Database() {
         this.db = new БазаДаних();
@@ -18,5 +18,4 @@ public class Database extends БазаДаних{
     public String getStatistics() {
         return db.отриматиСтатистичніДані();
     }
-
 }
